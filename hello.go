@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"net/http"
 	"os"
+	"time"
 )
 
 func main() {
@@ -54,8 +55,12 @@ func iniciarMonitoramento() {
 
 	sites := []string{"https://www.pucrs.br/", "https://www.alura.com.br/", "https://www.sogil.com.br/", "https://www.wapstore.com.br/"}
 
-	for i := range sites {
-		testaSite(sites[i])
+	for i := 0; i < 5; i++ {
+		fmt.Println("")
+		for j := range sites {
+			testaSite(sites[j])
+		}
+		time.Sleep(3 * time.Second)
 	}
 }
 
