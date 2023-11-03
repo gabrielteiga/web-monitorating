@@ -7,6 +7,9 @@ import (
 	"time"
 )
 
+const monitoramento = 2
+const delay = 3
+
 func main() {
 	exibeIntroducao()
 
@@ -55,12 +58,12 @@ func iniciarMonitoramento() {
 
 	sites := []string{"https://www.pucrs.br/", "https://www.alura.com.br/", "https://www.sogil.com.br/", "https://www.wapstore.com.br/"}
 
-	for i := 0; i < 5; i++ {
+	for i := 0; i < monitoramento; i++ {
 		fmt.Println("")
 		for j := range sites {
 			testaSite(sites[j])
 		}
-		time.Sleep(3 * time.Second)
+		time.Sleep(delay * time.Second)
 	}
 }
 
