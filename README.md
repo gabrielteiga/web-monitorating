@@ -12,7 +12,6 @@ O Monitor de Sites é uma aplicação escrita em Go que permite acompanhar o sta
 
 - Geração de logs quando ocorrerem problemas nos sites.
 - Geração de logs quando os sites estiverem funcionando corretamente.
-- Notificações por e-mail ou outros meios quando um site estiver inacessível por um período prolongado.
 
 ## Por que Registrar Logs de Sites é Importante
 
